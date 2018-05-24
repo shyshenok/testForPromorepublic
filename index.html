@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Text settings</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<body>
+
+<main class="text-options">
+    <section class="to-title">
+        <h3>Text options</h3>
+    </section>
+    <section class="to-font-and-color">
+        <label for="fonts" class="custom-select">
+            <select name="fonts" id="fonts" class="fonts">
+                <option>PT Serif</option>
+                <option>second</option>
+                <option>third</option>
+            </select>
+        </label>
+        <div class="colors"></div>
+    </section>
+    <section class="to-font-type-and-align">
+        <section class="font-type-button">
+            <input id="B" type="radio" name="font-type">
+            <label for="B">B</label>
+            <input id="I" type="radio" name="font-type">
+            <label for="I">I</label>
+            <input id="AA" type="radio" name="font-type">
+            <label for="AA">AA</label>
+
+        </section>
+        <section class="align-button">
+            <input id="left" type="radio" name="align">
+            <label for="left">
+                <img src="src/align-left.svg" alt="align text to left">
+            </label>
+            <input id="center" type="radio" name="align">
+            <label for="center">
+                <img src="src/align-center.svg" alt="align text to center">
+            </label>
+            <input id="right" type="radio" name="align">
+            <label for="right">
+                <img src="src/align-right.svg" alt="align text to right">
+            </label>
+
+        </section>
+    </section>
+    <section class="to-range-bar">
+        <section class="text-size-params">
+            <div class="size-item">
+                <label for="font-size">
+                    Font size
+                </label>
+                <input id="font-size" type="range" value="1">
+            </div>
+            <div class="size-item">
+                <label for="line-height">
+                    Line height
+                </label>
+                <input id="line-height" type="range" value="1">
+
+            </div>
+            <div class="size-item">
+                <label for="letter-spacing">
+                    Letter spacing
+                </label>
+                <input id="letter-spacing" type="range" min="1" value="1">
+            </div>
+
+        </section>
+        <section class="input-custom-value">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+        </section>
+    </section>
+</main>
+
+
+</body>
+</html>
