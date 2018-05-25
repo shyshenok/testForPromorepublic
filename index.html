@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<main class="text-options">
+<main id="text-options" class="text-options visibility">
     <section class="to-title">
         <h3>Text options</h3>
     </section>
@@ -55,31 +55,32 @@
                 <label for="font-size">
                     Font size
                 </label>
-                <input id="font-size" type="range" value="1">
+                <input id="font-size" type="range" min="1" max="100" value="1">
             </div>
             <div class="size-item">
                 <label for="line-height">
                     Line height
                 </label>
-                <input id="line-height" type="range" value="1">
+                <input id="line-height" type="range" min="1" max="100" value="1">
 
             </div>
             <div class="size-item">
                 <label for="letter-spacing">
                     Letter spacing
                 </label>
-                <input id="letter-spacing" type="range" min="1" value="1">
+                <input id="letter-spacing" type="range" min="1" max="100" value="1">
             </div>
 
         </section>
         <section class="input-custom-value">
-            <input type="text">
-            <input type="text">
-            <input type="text">
+            <input id="font-size-input" type="number">
+            <input id="line-height-input" type="number">
+            <input id="letter-spacing-input" type="number">
         </section>
     </section>
 </main>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js.js"></script>
 
 </body>
 </html>
