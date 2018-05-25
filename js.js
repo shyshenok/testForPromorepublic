@@ -39,38 +39,24 @@ $(document).ready(function () {
         });
     }
 
-
-    $('#font-size').change(function () {
-        var newValue = this.value;
-        console.log(newValue);
-        $('#font-size-input').val(newValue);
-    });
-
-    $('#font-size-input').on('input', function () {
-        $('#font-size').val(this.value);
-    });
-
-    $('#line-height').change(function () {
-        var newValue = this.value;
-        console.log(newValue);
-        $('#line-height-input').val(newValue);
-    });
-
-    $('#line-height-input').on('input', function () {
-        $('#line-height').val(this.value);
-    });
-    $('#letter-spacing').change(function () {
-        var newValue = this.value;
-        console.log(newValue);
-        $('#letter-spacing-input').val(newValue);
-    });
-
-    $('#letter-spacing-input').on('input', function () {
-        $('#letter-spacing-input').val(this.value);
-    });
-
+    range('font-size', 'font-size-input')
+    range('line-height', 'line-height-input')
+    range('letter-spacing', 'letter-spacing-input')
 
 });
+
+function range(idRange, idFild) {
+    $('#'+ idRange+'').change(function () {
+        var newValue = this.value;
+        console.log(newValue);
+        $('#'+ idFild+'').val(newValue);
+    });
+
+    $('#'+ idFild+'').on('input', function () {
+        $('#'+ idRange+'').val(this.value);
+    });
+
+}
 
 function translate(xTran, yTran, x, y) {
     $("#text-options").css({top: y, left: x, opacity: 1, transform: "translate3d(" + xTran + "%," + yTran + "%, 0)"});
